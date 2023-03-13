@@ -1,5 +1,5 @@
 cube = float(input("cube = "))
-epsilon = 0.001
+epsilon = 0.00001
 guess = 0.0
 increment = 0.001
 num_guesses = 0
