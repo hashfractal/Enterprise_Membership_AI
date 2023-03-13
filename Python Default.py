@@ -11,5 +11,3 @@ while abs(guess**3 - cube) >= epsilon:# and guess <= cube:
         print("Failed on cube root of", cube, guess)
     else:
         print(guess, 'is close to the cube root of', cube)
-        
-def test
