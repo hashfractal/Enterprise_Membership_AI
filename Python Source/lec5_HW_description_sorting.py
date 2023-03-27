@@ -18,6 +18,8 @@ class Node(object):
 				self.corder = classorder
 				self.next = next
 				self.prev = prev
+		def __str__(self):
+			return self.data
 				
 #WSU Linked List Class for finding the class which are taughted by WSU
 #This Ojbect will contain the order of class
@@ -53,13 +55,6 @@ class WSU_linked_list(object):
 						itemval = current.data
 						current = current.next
 						yield itemval
-		
-		def brutenode(self):
-				current = self.head
-				while current:
-						node = current
-						current = current.next
-						yield node
 						
 #define sorted class list
 # precondition: node data with class list by append function
@@ -67,10 +62,34 @@ class WSU_linked_list(object):
 # output: 
 #        1) return  none 
 #        2) print class list in priority of class order
-		def sorted_classlist():
-			for i in WSU_linked_list.brutenode:
+		def sorted_classlist(self):
+			target_pointer = self.head
+			select_pointer = self.head
+			min_pointer = select_pointer
+
+			while True:
+				select_pointer = target_pointer.next
+				min_pointer = target_pointer
 				while True:
-					strlist = [i.data, i.next.data]
+					if select_pointer is None:
+						break
+					slist = [min_pointer.data, select_pointer.data]
+					clist = sorted(slist)
+					if slist[0] != clist[0]:
+						min_pointer = select_pointer
+					select_pointer = select_pointer.next
+
+				temp = target_pointer.data
+				target_pointer.data = min_pointer.data
+				min_pointer.data = temp
+
+				if min_pointer.next is None:
+					break
+				else:
+					 target_pointer = target_pointer.next
+
+			self.print_foward()
+
 					
 					
 			
