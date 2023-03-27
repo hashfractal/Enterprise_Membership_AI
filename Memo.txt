@@ -1,1 +1,2 @@
 https://www.boostcourse.org/cs204: Data structure 강의
+아키텍처 뷰

@@ -1,3 +1,9 @@
-slist = [1,2,3,4,5,6]
+def g(n):
+	x = 0
+	for i in range(n):
+		for j in range (n):
+			x + 1
+	return x
 
-print(slist[0:6:2])
+
+
