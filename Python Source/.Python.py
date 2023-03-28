@@ -1,9 +1,12 @@
-def g(n):
-	x = 0
-	for i in range(n):
-		for j in range (n):
-			x + 1
-	return x
+def intToStr(i):
+	digits = '0123456789' 
+	if i == 0:
+		return '0'
+	
+	result = '' 
+	while i > 0:
+		result = digits[i%10] + result
+		i = i//10 
+	return result
 
-
-
+print(intToStr(3276755555555555555555555555555555555555555555555555555555555555555555555))
