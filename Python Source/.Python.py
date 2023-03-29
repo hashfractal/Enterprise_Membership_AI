@@ -1,12 +1,12 @@
-def intToStr(i):
-	digits = '0123456789' 
-	if i == 0:
-		return '0'
-	
-	result = '' 
-	while i > 0:
-		result = digits[i%10] + result
-		i = i//10 
-	return result
+def make_pretty(func):
 
-print(intToStr(3276755555555555555555555555555555555555555555555555555555555555555555555))
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()
