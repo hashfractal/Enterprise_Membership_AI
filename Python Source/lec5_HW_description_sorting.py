@@ -86,7 +86,7 @@ class WSU_linked_list(object):
 				if min_pointer.next is None:
 					break
 				else:
-					 target_pointer = target_pointer.next
+					target_pointer = target_pointer.next
 
 			self.print_foward()
 
