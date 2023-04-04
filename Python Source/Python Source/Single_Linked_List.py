@@ -9,7 +9,7 @@ class LinkedList:
 		self.dummy_head = ListNode(None, None)
 		self.head = self.dummy_head
 		self.__count = 0
-  
+	
 	def insert(self, i:int, newItem):
 		prev = self.__getNode(i - 1)
 		prev.next = ListNode(newItem, prev.next)
@@ -19,12 +19,14 @@ class LinkedList:
 		prev.next = ListNode(newItem, None)
 		self.__count += 1
 	def pop(self, i:int):   # i번 노드 삭제. 고정 파라미터
-		prev = self.__getNode(i - 1)
-		curr = prev.next
-		prev.next = curr.next
-		self.__count -= 1
-		return curr.item
-  
+		if (i >= 0 and i <= self.__count-1):
+			prev = self.__getNode(i - 1)
+			curr = prev.next
+			prev.next = curr.next
+			self.__count -= 1
+			return curr.item
+		return None
+	
 	def remove(self, x):
 		(prev, curr) = self.__findNode(x)
 		if curr != None:
@@ -56,7 +58,7 @@ class LinkedList:
 	def clear(self):
 		self.dummy_head.next = None
 		self.__count = 0
-  
+	
 	def count(self, x) -> int:
 		res = 0
 		prev = self.head
@@ -70,7 +72,7 @@ class LinkedList:
 	def extend(self, a): # 여기서 a는 self와 같은 타입의 리스트
 		for i in range(a.size()):
 			self.append(a.get(i))
-   
+	 
 	def copy(self):
 		res = LinkedList()
 		for i in range(self.size()):
@@ -83,7 +85,7 @@ class LinkedList:
 		for i in range(temp.size()):
 			self.insert(0, temp.get(i))
 		
-  
+	
 	def sort(self) -> None:
 		temp = []
 		for i in range(self.count):
@@ -112,24 +114,25 @@ class LinkedList:
 		for i in range(self.size()):
 			print(self.get(i), end=" ")
 		print()
-   
-   
-list = LinkedList()
-list.append(30)
-list.insert(0, 20)
-a = LinkedList()
-a.append(4) 
-a.append(3) 
-a.append(3) 
-a.append(2) 
-a.append(1)
-a.printList()
-list.extend(a)
-list.printList()
-list.reverse()
-list.printList()
-list.pop(0)
-list.printList()
-print("count(3):", list.count(3))
-print("get(2):", list.get(2))
-list.printList()
+	
+	
+if __name__ == "main":
+	list = LinkedList()
+	list.append(30)
+	list.insert(0, 20)
+	a = LinkedList()
+	a.append(4) 
+	a.append(3) 
+	a.append(3) 
+	a.append(2) 
+	a.append(1)
+	a.printList()
+	list.extend(a)
+	list.printList()
+	list.reverse()
+	list.printList()
+	list.pop(0)
+	list.printList()
+	print("count(3):", list.count(3))
+	print("get(2):", list.get(2))
+	list.printList()
