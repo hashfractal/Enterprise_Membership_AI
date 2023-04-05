@@ -61,3 +61,6 @@ class Heap:
 # 코드 8-8
 	def heapPrint(self):
 		print(self.__A)
+
+	def heapToList(self):
+		return self.__A

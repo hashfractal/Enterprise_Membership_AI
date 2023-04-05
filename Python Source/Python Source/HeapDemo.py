@@ -1,5 +1,13 @@
 from heap import *
 
+A = [3, 8, 2, 4, 8, 1, 2, 0, 5, 9]
+print ("A: ", A)
+temp = Heap(A)
+temp.buildHeap()
+A = temp.heapToList()
+print ("A:", A)
+
+
 h1 = Heap([1, 11, 9, 2, 3])
 h1.buildHeap()
 h1.heapPrint()

@@ -38,6 +38,7 @@
     <Compile Include="poo.py" />
     <Compile Include="Postfix.py" />
     <Compile Include=".main.py" />
+    <Compile Include="QuickSort.py" />
     <Compile Include="Reference Code\1.Basic\evenOdd.py" />
     <Compile Include="Reference Code\1.Basic\foo.py" />
     <Compile Include="Reference Code\1.Basic\nestedConds.py" />
@@ -73,6 +74,7 @@
     <Compile Include="Reference Code\9~12\lec12_sorting.py" />
     <Compile Include="Reference Code\9~12\lec9_inheritance.py" />
     <Compile Include="HeapDemo.py" />
+    <Compile Include="SelectionSort.py" />
     <Compile Include="Single_Linked_List.py" />
   </ItemGroup>
   <ItemGroup>
