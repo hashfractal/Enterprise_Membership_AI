@@ -1,8 +1,8 @@
-import Single_Linked_List
+import Sinlge_Linked_List
 
 class LinkedStack:
 	def __init__(self) -> None:
-		self.Storage = Single_Linked_List.LinkedList()
+		self.Storage = Sinlge_Linked_List.LinkedList()
 	
 	def push(self, x):
 		self.Storage.insert(0, x)

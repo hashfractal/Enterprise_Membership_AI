@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5fa2a5e0-beb2-4a30-9868-77fa6843e4a6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>HeapDemo.py</StartupFile>
+    <StartupFile>Sort.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python Source</Name>
     <RootNamespace>Python Source</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.11</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,9 +74,10 @@
     <Compile Include="Reference Code\9~12\lec11_complexity_part2.py" />
     <Compile Include="Reference Code\9~12\lec12_sorting.py" />
     <Compile Include="Reference Code\9~12\lec9_inheritance.py" />
-    <Compile Include="HeapDemo.py" />
+    <Compile Include="Priortiy Queue.py" />
     <Compile Include="SelectionSort.py" />
     <Compile Include="Single_Linked_List.py" />
+    <Compile Include="Sort.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reference Code\" />
@@ -88,6 +90,9 @@
     <Folder Include="Reference Code\7.debug\" />
     <Folder Include="Reference Code\8.classes\" />
     <Folder Include="Reference Code\9~12\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.11" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
