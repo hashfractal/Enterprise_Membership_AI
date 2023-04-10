@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5fa2a5e0-beb2-4a30-9868-77fa6843e4a6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Sort.py</StartupFile>
+    <StartupFile>BST.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python Source</Name>
     <RootNamespace>Python Source</RootNamespace>
-    <InterpreterId>Global|PythonCore|3.11</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="0to1.py" />
     <Compile Include="Assign1-1_description.py" />
+    <Compile Include="BST.py" />
     <Compile Include="circularLinkedList_class.py" />
     <Compile Include="class_description.py" />
     <Compile Include="drandom.py" />
@@ -93,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.11" />
+    <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
