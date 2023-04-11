@@ -1,3 +1,6 @@
+from locale import currency
+
+
 class ListNode:
 	def __init__(self, newItem, nextNode):
 		self.item = newItem
@@ -93,6 +96,10 @@ class LinkedList:
 		temp.sort()
 		for i in range(len(temp)):
 			self.append(temp[i])
+
+	def select(self, value) -> ListNode:
+		prev, curr = self.__findNode(value)
+		return curr
 
 	def __findNode(self, x):
 		prev = self.head
