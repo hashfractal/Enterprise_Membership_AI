@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5fa2a5e0-beb2-4a30-9868-77fa6843e4a6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>HashTable.py</StartupFile>
+    <StartupFile>.main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +12,7 @@
     <Name>Python Source</Name>
     <RootNamespace>Python Source</RootNamespace>
     <InterpreterId>Global|PythonCore|3.9</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,26 +23,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="0to1.py" />
-    <Compile Include="Assign1-1_description.py" />
-    <Compile Include="BST.py" />
-    <Compile Include="circularLinkedList_class.py" />
-    <Compile Include="class_description.py" />
-    <Compile Include="drandom.py" />
-    <Compile Include="HashTable.py" />
-    <Compile Include="heap.py" />
-    <Compile Include="lec5_HW_description_sorting.py" />
-    <Compile Include="lec5_tuples_lists.py" />
-    <Compile Include="LinkedList_description.py" />
-    <Compile Include="linkedQueue.py" />
-    <Compile Include="Linked_List_Queue.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Linked_List_Stack.py" />
-    <Compile Include="poo.py" />
-    <Compile Include="Postfix.py" />
+    <Compile Include="dataframex.py" />
     <Compile Include=".main.py" />
-    <Compile Include="QuickSort.py" />
     <Compile Include="Reference Code\1.Basic\evenOdd.py" />
     <Compile Include="Reference Code\1.Basic\foo.py" />
     <Compile Include="Reference Code\1.Basic\nestedConds.py" />
@@ -76,10 +59,6 @@
     <Compile Include="Reference Code\9~12\lec11_complexity_part2.py" />
     <Compile Include="Reference Code\9~12\lec12_sorting.py" />
     <Compile Include="Reference Code\9~12\lec9_inheritance.py" />
-    <Compile Include="Priortiy Queue.py" />
-    <Compile Include="SelectionSort.py" />
-    <Compile Include="Single_Linked_List.py" />
-    <Compile Include="Sort.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reference Code\" />
@@ -94,7 +73,6 @@
     <Folder Include="Reference Code\9~12\" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|PythonCore|3.11" />
     <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
