@@ -1,7 +1,14 @@
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
+cities = pd.read_csv("ML Main\california_cities.csv")
 
-fig, ax = plt.subplots()
+lat, lon = cities["latd"], cities["longd"]
+population, area = cities["population_total"], cities["area_total_km2"]
 
-X_1 = range(100)
-Y_1 = [np.cos(value)
-       for value in X]
+plt.scatter(lon, lat, c=np.log10(population), cmap = "Accent", s=area, alpha=0.5)
+plt.title("California Cities: Area and Population")
+plt.xlabel("lognitude")
+plt.ylabel("latitude")
+plt.colorbar(label= "Log$_{10}$(polulation)")
+plt.show()
