@@ -10,8 +10,8 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
 #read data from CSV file 
-train = pd.read_csv('train.csv')
-test = pd.read_csv('test.csv')
+train = pd.read_csv('Titanic/train.csv')
+test = pd.read_csv('Titanic/test_titanic.csv')
 
 
 
@@ -33,19 +33,19 @@ test['IsFemale'] = (test['Sex'] == 'female')
 #dimension vector 
 predictors = ['Pclass', 'IsFemale', 'Age']
 
+x_test = pd.DataFrame(test, columns= predictors)
+y_test = test["Survived"]
 #make train and test set for validation
-x_train
-y_train
+x_train = pd.DataFrame(train, columns=predictors)
+y_train = train["Survived"]
 
-x_test
-y_true
+#x_test
+#y_true
 #make label Survied status
 model = LogisticRegression()
-model.fit(X_train, y_train)
+model.fit(x_train, y_train)
 
+y_predict = model.predict(x_test)
+print(y_predict[:])
 
-
-
-
-
-
+print((y_test == y_predict).mean())
