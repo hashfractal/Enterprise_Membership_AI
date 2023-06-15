@@ -6,14 +6,20 @@ with open('Model/response.json') as f:
 
 print(origin[1]['results'][1]['original_title'])
 
-new_dict = {}
+res = {}
 
 for i in range(len(origin)):
     contents = origin[i]['results']
     for j in range(len(contents)):
-        movie_ID = contents[j]['id']
-        movie_title = contents[j]['original_title']
-        movie_tags = contents[j]['genre_ids']
-        new_dict[movie_ID] = [movie_title, movie_tags]
+        new_dict = {}
+        new_dict['ID'] = contents[j]['id']
+        new_dict['Title'] = contents[j]['original_title']
+        new_dict['Tags'] = contents[j]['genre_ids']
+        res[contents[j]['id']] = new_dict
+output = json.dumps(res)
 
-pprint.pprint(new_dict)
+pprint.pprint(output)
+
+file_path = 'Model/Result.json'
+with open(file_path, 'w', encoding='utf-8') as file:
+    json.dump(output, file)
