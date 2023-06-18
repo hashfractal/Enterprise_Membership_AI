@@ -405,4 +405,4 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio
-DeepLearning/Wild Image Classification/Model/VGG-16_v1
+DeepLearning/Wild Image Classification/Model/
