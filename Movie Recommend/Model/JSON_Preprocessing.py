@@ -15,10 +15,11 @@ for i in range(len(origin)):
         new_dict['ID'] = contents[j]['id']
         new_dict['Title'] = contents[j]['original_title']
         new_dict['Tags'] = contents[j]['genre_ids']
+        new_dict['poster'] = contents[j]['poster_path']
         res[contents[j]['id']] = new_dict
-output = json.dumps(res)
+output = json.dumps(res, indent="\t")
 
-pprint.pprint(output)
+print(output)
 
 file_path = 'Model/Result.json'
 with open(file_path, 'w', encoding='utf-8') as file:
